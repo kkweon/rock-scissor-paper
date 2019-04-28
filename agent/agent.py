@@ -1,3 +1,6 @@
+"""
+Interface for Agent
+"""
 import abc
 from typing import Optional
 
@@ -10,4 +13,4 @@ class Agent(abc.ABC):
 
     @abc.abstractmethod
     def get_hand(self, prev: Optional[Hand]) -> Hand:
-        raise NotImplemented
+        raise NotImplementedError

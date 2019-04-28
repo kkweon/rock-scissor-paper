@@ -1,3 +1,6 @@
+lint:
+	pylint **/*.py
+
 test:
 	pytest
 

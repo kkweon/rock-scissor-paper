@@ -1,8 +1,3 @@
-"""
-Random Agent
-
-Choose a random hand
-"""
 import random
 from typing import Optional
 
@@ -11,6 +6,8 @@ from model import Hand
 from .agent import Agent
 
 
-class RandomAgent(Agent):
+class CopyAgent(Agent):
     def get_hand(self, prev: Optional[Hand]) -> Hand:
-        return random.choice([Hand.ROCK, Hand.SCISSOR, Hand.PAPER])
+        if prev is None:
+            return random.choice([Hand.ROCK, Hand.SCISSOR, Hand.PAPER])
+        return prev
